@@ -1,0 +1,36 @@
+{
+  "name": "flashcards-app",
+  "version": "1.0.0",
+  "description": "Flashcards for language learning",
+  "main": "index.js",
+  "mode": "NODE_ENV",
+  "scripts": {
+    "start": "set NODE_ENV=production && node server/server.js",
+    "dev": "set NODE_ENV=development && webpack-dev-server --open --hot && nodemon server/server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KChantal/flashcards-app.git"
+  },
+  "author": "K. Wysocki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KChantal/flashcards-app/issues"
+  },
+  "homepage": "https://github.com/KChantal/flashcards-app#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
