@@ -4,7 +4,7 @@ import './styles/app.scss';
 
 const App = () => {
   return (
-    <div className="main">
+    <div className="app">
       <h1>Hello from React</h1>
     </div>
   );
