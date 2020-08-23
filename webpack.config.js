@@ -13,7 +13,6 @@ module.exports = {
   devServer: {
     port: 8080,
     publicPath: '/build/',
-    contentBase: './build',
     proxy: {
       '/': {
         target: 'http://localhost:3000/',

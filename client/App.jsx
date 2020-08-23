@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './styles/app.scss';
 
 const App = () => {
   return (
