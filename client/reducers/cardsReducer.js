@@ -1,7 +1,7 @@
 const initialState = {
-  englishWord: 'Hello',
-  chineseWord: '你好',
-  pinyin: 'nǐ hǎo',
+  englishWord: 'Welcome',
+  chineseWord: '',
+  pinyin: '',
 };
 
 const cardsReducer = (state = initialState, action) => {
