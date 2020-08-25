@@ -1,4 +1,6 @@
 import React from 'react';
+
+import CardsContainer from './CardContainer.jsx';
 import '../styles/main.scss';
 
 const Main = (props) => {
@@ -7,6 +9,7 @@ const Main = (props) => {
       <div>
         <h1>Hello from Main component</h1>
       </div>
+      <CardsContainer />
     </div>
   );
 };
