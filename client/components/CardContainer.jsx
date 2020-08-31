@@ -1,9 +1,10 @@
 import React from 'react';
+import Flashcard from './Flashcard';
 
 const CardsContainer = (props) => {
   return (
     <div className="cardsContainer">
-      <h1>Card will go here</h1>
+      <Flashcard />
     </div>
   );
 };
