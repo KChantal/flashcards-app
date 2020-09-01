@@ -2,7 +2,7 @@ import React from 'react';
 
 const Flashcard = (props) => {
   return (
-    <div className="3D-container">
+    <div className="container-3D-space">
       <div className="flashcard">
         <div className="front-of-card">
           <p className="chinese-character">汉字</p>
