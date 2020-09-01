@@ -7,8 +7,8 @@ App to assist in language learning (focusing first on Chinese)
 Front end || Back end
 ________________________________________________
 React     | Node              | MongoDB
-
-Redux     | Express           |
+ Redux    | Express           |
+          |                   |
 
 
         
