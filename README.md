@@ -8,8 +8,6 @@ Front end || Back end
 ________________________________________________
 React     | Node              | MongoDB
 Redux     | Express           |
-          |                   |
-          |                   |
 
 
         
