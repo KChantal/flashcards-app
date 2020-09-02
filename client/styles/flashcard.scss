@@ -1,7 +1,54 @@
 .cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 5em;
 }
 
+.buttons-div {
+  padding: 2rem;
+
+  .card-buttons {
+    margin: 0.8rem;
+    padding: 0.3rem;
+    // box-shadow: 1px 1px 20px 2px slategray;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .correct-button {
+    background-color: springgreen;
+    border: solid 2px darken($color: springgreen, $amount: 20%);
+    box-shadow: 1px 1px 10px 0px darken($color: springgreen, $amount: 20%);
+
+    &:hover {
+      box-shadow: 1px 1px 20px 10px darken($color: springgreen, $amount: 5%);
+      transition-delay: 1ms;
+    }
+  }
+  .wrong-button {
+    background-color: tomato;
+    border: solid 2px darken($color: tomato, $amount: 20%);
+    box-shadow: 1px 1px 10px 0px darken($color: tomato, $amount: 20%);
+
+    &:hover {
+      box-shadow: 1px 1px 20px 10px darken($color: tomato, $amount: 5%);
+      transition-delay: 1ms;
+    }
+  }
+}
+
+/*
+ Flashcard.jsx properties
+*/
 .container-3D-space {
   height: 300px;
   width: 240px;
