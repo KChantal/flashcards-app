@@ -10,12 +10,13 @@
   padding: 2rem;
 
   .card-buttons {
-    margin: 0.8rem;
+    margin: 1rem;
     padding: 0.3rem;
     // box-shadow: 1px 1px 20px 2px slategray;
     font-weight: 500;
     font-size: 1.2rem;
     border: none;
+    border: solid 1px darkgrey;
     border-radius: 0.5rem;
     cursor: pointer;
 
@@ -25,9 +26,9 @@
   }
 
   .correct-button {
-    background-color: springgreen;
-    border: solid 2px darken($color: springgreen, $amount: 20%);
-    box-shadow: 1px 1px 10px 0px darken($color: springgreen, $amount: 20%);
+    background-color: lighten($color: springgreen, $amount: 30%);
+
+    // box-shadow: 1px 1px 10px 0px darken($color: springgreen, $amount: 20%);
 
     &:hover {
       box-shadow: 1px 1px 20px 10px darken($color: springgreen, $amount: 5%);
@@ -35,9 +36,9 @@
     }
   }
   .wrong-button {
-    background-color: tomato;
-    border: solid 2px darken($color: tomato, $amount: 20%);
-    box-shadow: 1px 1px 10px 0px darken($color: tomato, $amount: 20%);
+    background-color: lighten($color: tomato, $amount: 10%);
+    // border: solid 2px darken($color: tomato, $amount: 20%);
+    // box-shadow: 1px 1px 10px 0px darken($color: tomato, $amount: 20%);
 
     &:hover {
       box-shadow: 1px 1px 20px 10px darken($color: tomato, $amount: 5%);

@@ -7,8 +7,8 @@ const CardsContainer = (props) => {
       <Flashcard />
 
       <div className="buttons-div">
-        <button className="card-buttons correct-button">我知道</button>
-        <button className="card-buttons wrong-button">我不知道</button>
+        <button className="card-buttons correct-button">认识</button>
+        <button className="card-buttons wrong-button">不懂</button>
       </div>
     </div>
   );
