@@ -15,12 +15,12 @@ const Flashcard = (props) => {
         onClick={flipCard}
       >
         <div className="front-of-card">
-          <p className="chinese-character">汉字</p>
+          <p className="chinese-character">{props.character}</p>
         </div>
         <div className="back-of-card">
           <div>
-            <p className="pinyin">Pīnyīn</p>
-            <p className="english-text">English</p>
+            <p className="pinyin">{props.pinyin}</p>
+            <p className="english-text">{props.english}</p>
           </div>
         </div>
       </div>
