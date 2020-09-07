@@ -19,8 +19,8 @@ const chineseSchema = new Schema({
   category: String,
 });
 
-const Chinese = mongoose.model('chinese', chineseSchema);
+const chinese_words = mongoose.model('chinese_words', chineseSchema);
 
 module.exports = {
-  Chinese,
+  chinese_words,
 };

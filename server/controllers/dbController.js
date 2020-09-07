@@ -5,10 +5,15 @@ const dbController = {};
 dbController.getChineseWords = (req, res, next) => {
   console.log('in getWords');
 
-  models.Chinese.find({})
-    .then((response) => response)
+  models.chinese_words
+    .aggregate([{ $sample: { size: 1 } }])
+    .then((response) => {
+      console.log(response);
+      return response;
+    })
     .then((data) => {
       res.locals.words = data;
+      console.log(data);
       return next();
     })
     .catch((err) => {
@@ -18,3 +23,7 @@ dbController.getChineseWords = (req, res, next) => {
       });
     });
 };
+
+// dbController.addWord = (req, res, next) => {
+//   console.log('adding word');
+// };
