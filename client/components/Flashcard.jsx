@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 const Flashcard = (props) => {
   const [flipped, setFlipped] = useState(false);
 
-  const flipCard = (event) => {
-    console.log(flipped);
+  const flipCard = () => {
     setFlipped(!flipped);
   };
 
