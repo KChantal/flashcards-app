@@ -8,7 +8,7 @@ const initialState = {
   englishWord: 'English',
   chineseWord: '汉字',
   pinyin: 'Pīnyīn',
-  words: [],
+  category: 'Any',
   loading: false,
   error: null,
 };
@@ -26,7 +26,10 @@ const cardsReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        words: action.payload.words,
+        englishWord: action.payload.english,
+        chineseWord: action.payload.chinese,
+        pinyin: action.payload.pinyin,
+        category: action.payload.category,
       };
 
     case FETCH_WORD_FAILURE:

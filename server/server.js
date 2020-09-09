@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const dbController = require('./controllers/dbController');
 
 const app = express();
 const PORT = 3000;
@@ -8,6 +9,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, '../client/')));
+
+app.get('/getWords', dbController.getChineseWords, (req, res) => {
+  res.status(200).json(res.locals.words);
+});
 
 // Serve base html page with a GET request to /
 app.get('/', (req, res) => {

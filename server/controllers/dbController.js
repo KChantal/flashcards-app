@@ -8,12 +8,7 @@ dbController.getChineseWords = (req, res, next) => {
   models.chinese_words
     .aggregate([{ $sample: { size: 1 } }])
     .then((response) => {
-      console.log(response);
-      return response;
-    })
-    .then((data) => {
-      res.locals.words = data;
-      console.log(data);
+      res.locals.words = response[0];
       return next();
     })
     .catch((err) => {
@@ -24,6 +19,6 @@ dbController.getChineseWords = (req, res, next) => {
     });
 };
 
-// dbController.addWord = (req, res, next) => {
-//   console.log('adding word');
-// };
+// dbController.getChineseWords();
+
+module.exports = dbController;

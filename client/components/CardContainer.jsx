@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Flashcard from './Flashcard.jsx';
-import { fetchWordBegin, updateScore } from '../actions/actions';
+import { getWordFromDb, updateScore } from '../actions/actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
@@ -21,13 +21,13 @@ const CardsContainer = (props) => {
   };
 
   const fetchWord = () => {
-    props.dispatch(fetchWordBegin());
+    props.dispatch(getWordFromDb());
   };
 
   return (
     <div className="cards-container">
       <Flashcard
-        character={loading ? 'Loading....' : chineseWord}
+        character={chineseWord}
         pinyin={pinyin}
         english={englishWord}
       />
