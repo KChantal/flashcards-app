@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Flashcard from './Flashcard.jsx';
-import { getWordFromDb, updateScore } from '../actions/actions';
+import { getWordFromDb, updateScore, updateTotal } from '../actions/actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
@@ -9,7 +9,6 @@ const mapStateToProps = (state) => ({
   pinyin: state.cards.pinyin,
   loading: state.cards.loading,
   error: state.cards.error,
-  score: state.score.score,
 });
 
 const CardsContainer = (props) => {
@@ -21,6 +20,7 @@ const CardsContainer = (props) => {
   };
 
   const fetchWord = () => {
+    props.dispatch(updateTotal());
     props.dispatch(getWordFromDb());
   };
 
