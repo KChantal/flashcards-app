@@ -22,4 +22,9 @@
     font-weight: 800;
     color: firebrick;
   }
+
+  .total-num {
+    font-weight: 800;
+    color: darken($color: firebrick, $amount: 10%);
+  }
 }
