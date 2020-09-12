@@ -3,17 +3,27 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
   score: state.score.score,
+  total: state.score.total,
 });
 
 const Sidebar = (props) => {
-  const { score } = props;
+  const { score, total } = props;
 
   return (
     <div className="sidebar">
-      <h1>Sidebar</h1>
+      <img
+        className="sidebar-img"
+        src="../assets/china-unsplash-annie-spratt.jpg"
+      ></img>
 
       <p className="sidebar-text">
-        Score: <span className="score-num">{score}</span>
+        Current Score: <br />
+        <span className="score-num">{score}</span>
+      </p>
+
+      <p className="sidebar-text">
+        Out of Total: <br />
+        <span className="total-num">{total}</span>
       </p>
     </div>
   );
