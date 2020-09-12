@@ -3,8 +3,6 @@ const models = require('../models/wordsModel');
 const dbController = {};
 
 dbController.getChineseWords = (req, res, next) => {
-  console.log('in getWords');
-
   models.chinese_words
     .aggregate([{ $sample: { size: 1 } }])
     .then((response) => {
