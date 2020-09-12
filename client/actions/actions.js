@@ -3,6 +3,7 @@ import {
   FETCH_WORD_SUCCESS,
   FETCH_WORD_FAILURE,
   UPDATE_SCORE,
+  UPDATE_TOTAL,
 } from '../constants/actionTypes';
 
 export const getWordFromDb = () => {
@@ -28,20 +29,10 @@ export const getWordFromDb = () => {
   };
 };
 
-// export const fetchWordBegin = () => ({
-//   type: FETCH_WORD_BEGIN,
-// });
-
-// export const fetchWordSuccess = (words) => ({
-//   type: FETCH_WORD_SUCCESS,
-//   payload: { words },
-// });
-
-// export const fetchWordFailure = (err) => ({
-//   type: FETCH_WORD_FAILURE,
-//   payload: { err },
-// });
-
 export const updateScore = () => ({
   type: UPDATE_SCORE,
+});
+
+export const updateTotal = () => ({
+  type: UPDATE_TOTAL,
 });

@@ -1,7 +1,8 @@
-import { UPDATE_SCORE } from '../constants/actionTypes';
+import { UPDATE_SCORE, UPDATE_TOTAL } from '../constants/actionTypes';
 
 const initialState = {
   score: 0,
+  total: 0,
 };
 
 const scoreReducer = (state = initialState, action) => {
@@ -12,6 +13,14 @@ const scoreReducer = (state = initialState, action) => {
       return {
         ...state,
         score: newScore,
+      };
+
+    case UPDATE_TOTAL:
+      let newTotal = state.total + 1;
+
+      return {
+        ...state,
+        total: newTotal,
       };
 
     default:
