@@ -8,4 +8,18 @@
   text-align: center;
   background-color: lighten($color: coral, $amount: 20%);
   border-left: solid 2px rosybrown;
+
+  .sidebar-img {
+    height: 15rem;
+    width: 12rem;
+  }
+
+  .sidebar-text {
+    font-size: 1.8rem;
+  }
+
+  .score-num {
+    font-weight: 800;
+    color: firebrick;
+  }
 }
