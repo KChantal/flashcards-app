@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, '../client/')));
+app.use(express.static(path.resolve(__dirname, '../build/')));
 
 app.get('/getWords', dbController.getChineseWords, (req, res) => {
   res.status(200).json(res.locals.words);
