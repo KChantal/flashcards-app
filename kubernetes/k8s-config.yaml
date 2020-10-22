@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flashcards-deployment
+  labels:
+    app: flashcards-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flashcards-app
+  template:
+    metadata:
+      labels:
+        app: flashcards-app
+    spec:
+      containers:
+        - name: flashcards-app
+          image: kchantal546/flashcards:1.0
+          ports:
+            - containerPort: 80
