@@ -19,3 +19,15 @@ spec:
           image: kchantal546/flashcards:1.0
           ports:
             - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flashcards-service
+spec:
+  selector:
+    app: flashcards-app
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 80
