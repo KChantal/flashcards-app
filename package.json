@@ -27,7 +27,7 @@
     "express": "^4.17.1",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.4.2",
-    "mongoose": "^5.10.0",
+    "mongoose": "^5.13.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -59,7 +59,9 @@
       "js",
       "jsx"
     ],
-    "transformIgnorePatterns": ["/node_modules/"],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
     "testPathIgnorePatterns": [
       "/node_modules/"
     ]
