@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Flashcard = (props) => {
+  const { character, pinyin, english } = props;
   const [flipped, setFlipped] = useState(false);
 
   const flipCard = () => {
@@ -14,12 +15,12 @@ const Flashcard = (props) => {
         onClick={flipCard}
       >
         <div className="front-of-card">
-          <p className="chinese-character">{props.character}</p>
+          <p className="chinese-character">{character}</p>
         </div>
         <div className="back-of-card">
           <div>
-            <p className="pinyin">{props.pinyin}</p>
-            <p className="english-text">{props.english}</p>
+            <p className="pinyin">{pinyin}</p>
+            <p className="english-text">{english}</p>
           </div>
         </div>
       </div>
